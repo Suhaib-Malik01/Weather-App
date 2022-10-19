@@ -1,0 +1,199 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 280px;
+    width: 550px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.gmap_canvas:hover {
+    transform: scale(1.04)
+}
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 280px;
+    display: flex;
+
+}
+
+#navbar {
+    padding: 40px 0px;
+    display: flex;
+    justify-content: center;
+    background-color: #f2f2f2;
+    gap: 130px;
+    margin: -9px;
+    align-items: center;
+}
+
+#navbar>div {
+    height: 100%;
+}
+
+input {
+    height: 39px;
+    width: 400px;
+    border-radius: 5px 0px 0px 5px;
+    border: none;
+    padding: 0% 2%;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+}
+
+input+button {
+    background-color: rgb(65, 65, 65);
+    color: white;
+    border: none;
+    margin-left: -5px;
+    padding: 12px 18px;
+    border-radius: 0px 5px 5px 0px;
+}
+
+input+button:hover {
+    cursor: pointer;
+}
+
+#navbar>:last-child>button {
+    background-color: #e6e6e6;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-size: 10px;
+}
+
+#navbar>:last-child>button:hover {
+    cursor: pointer;
+    background-color: white;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-around;
+    width: 46%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#weather>:first-child {
+    color: #ec6e73;
+}
+
+#weather h2 {
+    margin-top: -13px;
+    color: rgb(64, 64, 64);
+}
+
+#weather span {
+    margin-top: -25px;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+}
+
+#weather img {
+    margin-left: -12px;
+    width: 20%;
+}
+
+#feel {
+    margin-top: -10px;
+}
+
+#data {
+    border-left: 2px solid #ec6e73;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+}
+
+#data>:nth-child(odd) {
+    font-size: 14px;
+    margin-left: 17px;
+    margin-top: -5px;
+}
+
+#data p {
+    font-size: 14px;
+    margin-left: 10px;
+    margin-top: -5px;
+}
+
+#days {
+    width: 48%;
+    margin: 40px auto 0px auto;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+#days>div {
+    text-align: center;
+    line-height: 8px;
+}
+
+@media screen and (min-width: 380px) and (max-width: 728px) {
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: auto;
+        gap: 30px;
+    }
+    #navbar>:first-child{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    input{
+        border: 1px solid;
+        border-radius: 10px;
+        width: 350px;
+    }
+    input+button{
+        border-radius: 10px;
+        width: 350px;
+    }
+
+    #container {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 30px;
+        width: 100%;
+    }
+    #weather{
+        width: 70%;
+        margin: auto auto auto auto;
+    }
+    .mapouter {
+    position: relative;
+    text-align: right;
+    height: 280px;
+    width: 70%;
+    margin: auto;
+    margin-top: 0px;
+    display: flex;
+    }
+    #Days {
+        width: auto;
+        overflow-y: scroll;
+    }
+
+    #Days::-webkit-scrollbar {
+        display: none;
+    }
+
+}
